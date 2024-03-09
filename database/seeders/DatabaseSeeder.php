@@ -39,6 +39,8 @@ class DatabaseSeeder extends Seeder
             'unique_code'=> '234567890',        
             ]);
 
+            $this->call(DokterSeeder::class);
+
     }
 
 }

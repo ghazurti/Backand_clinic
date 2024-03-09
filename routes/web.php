@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DoctorController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +28,9 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard');
     })->name('home');
     Route::resource('user', UserController::class);
+    Route::resource('Doctors', DoctorController::class);
 });
+
 
 // route::registerView(function (){
 //     return view('pages.auth.register');
